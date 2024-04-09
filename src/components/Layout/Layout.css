@@ -1,0 +1,48 @@
+/* Stile per il menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 0.5rem; /* Spazio tra gli elementi del menu */
+}
+
+.menu a {
+    display: block;
+    padding: 0.5rem 1rem; /* Spaziatura interna per il link */
+    text-decoration: none;
+    color: inherit; /* Utilizza il colore del testo predefinito */
+    transition: background-color 0.3s ease; /* Transizione per il cambio di colore di sfondo al passaggio del mouse */
+}
+
+.menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Colore di sfondo al passaggio del mouse */
+}
+
+/* Layout verticale per il menu */
+.menu-vertical {
+    width: 200px; /* Larghezza del menu verticale */
+}
+
+/* Layout orizzontale per il menu su schermi di grandi dimensioni */
+.lg\:menu-horizontal {
+    display: flex;
+}
+
+/* Spaziatura tra gli elementi del menu orizzontale */
+.menu-horizontal li {
+    margin-right: 1rem;
+}
+
+/* Stile per il contenitore principale */
+nav {
+    background-color: white; /* Colore di sfondo per il menu */
+    padding: 1rem; /* Spaziatura interna per il menu */
+}
+
+/* Stile per il contenuto della pagina */
+main {
+    padding: 1rem; /* Spaziatura interna per il contenuto */
+}
