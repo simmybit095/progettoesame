@@ -42,6 +42,7 @@ const useFetch = <T>(
 
   useEffect(() => {
     loadData();
+    console.log('carico dati')
   }, [path, page]);
 
   return [list, info] as [T[], Info];

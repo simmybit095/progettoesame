@@ -2,12 +2,16 @@ import React from "react";
 import { useCharacters, Character } from "../../hooks/useFetch";
 import { CardList } from "../CardList/CardList";
 import { Card } from "react-daisyui";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams, useSearchParams } from "react-router-dom";
+
 
 
 export const DetailsPage = () => {
     const { id } = useParams();
-    const [characters, info] = useCharacters();
+
+    const page = Math.ceil(Number(id) / 20)
+
+    const [characters, info] = useCharacters(page);
     const selectedCharacter = characters.find(character => character.id.toString() === id);
 
     return (

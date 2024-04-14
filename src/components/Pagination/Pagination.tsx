@@ -19,7 +19,7 @@ export const Pagination = (props: { currentPage: number, info: Info }) => {
     }
     return page
   }
-  return <div  style={{ marginLeft: '100px' }}className="join">
+  return <div style={{ marginLeft: '100px' }} className="join">
     <button onClick={() => { setSearchParams(setPage(pageControl(page - 1))); }} className="join-item btn">«</button>
     <button className="join-item btn">Page {props.currentPage}</button>
     <button onClick={() => { setSearchParams(setPage(pageControl(page + 1))); }} className="join-item btn">»</button>
