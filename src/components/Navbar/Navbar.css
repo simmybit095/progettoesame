@@ -1,0 +1,32 @@
+.navbar {
+    background-color: white; /* Colore di sfondo della navbar */
+    color: white; /* Colore del testo */
+    display: flex; /* Imposta il layout della navbar come flexbox */
+    justify-content: space-between; /* Spaziatura uniforme tra gli elementi della navbar */
+    padding: 20px; 
+}
+  
+  .navbar ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    margin: 0; /* Rimuove i margini predefiniti */
+    padding: 0; /* Rimuove il padding predefinito */
+    display: flex; /* Imposta il layout della lista come flexbox */
+  }
+  
+  .navbar ul li {
+    margin-right: 10px; /* Spaziatura tra gli elementi della lista */
+  }
+  
+  .navbar ul li:last-child {
+    margin-right: 0; /* Rimuove lo spazio a destra dall'ultimo elemento della lista */
+  }
+  
+  .navbar ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: red; /* Colore del testo dei link */
+  }
+  
+  .navbar ul li a:hover {
+    color: red; /* Cambia il colore del testo del link al passaggio del mouse */
+  }
+  

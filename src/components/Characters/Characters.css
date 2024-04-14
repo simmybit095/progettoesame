@@ -1,0 +1,16 @@
+/* Stile base per i link */
+a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #007bff; /* Colore del testo per i link non visitati */
+  }
+  
+  /* Stile per i link visitati */
+  a:visited {
+    color: #007bff; /* Colore del testo per i link visitati */
+  }
+  
+  /* Stile al passaggio del mouse sui link */
+  a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del mouse */
+  }
+  

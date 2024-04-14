@@ -11,13 +11,13 @@ export const SimpleNavbar = () => {
     const setPage = (page: number) => new URLSearchParams('page=' + page)
     return <>
         
-        {urls.map(url => {
+        {/* {urls.map(url => {
             return <>
                     <Link style={pathname === url ? bold: {}} to={url}>{url.replace('/', '')}</Link>
                     <br />
                 </>
-        })}
-        <br />
+        })} */}
+      <h2>simple navbar</h2>
         <p>{page}</p>
         <button onClick={() => {setSearchParams(setPage(page - 1));}} >Prev</button><br />
         <button onClick={() => {setSearchParams(setPage(page + 1));}} >Next</button>

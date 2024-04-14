@@ -1,10 +1,37 @@
-import { Character } from "../../hooks/useFetch";
-import { Episodes } from "../Episodes/Episodes";
+import React from "react";
+import { useCharacters, Character } from "../../hooks/useFetch";
+import { CardList } from "../CardList/CardList";
+import { Card } from "react-daisyui";
+import { useParams } from "react-router-dom";
 
-export const DetailsPage = ()=>{
-    return(
+
+export const DetailsPage = () => {
+    const { id } = useParams();
+    const [characters, info] = useCharacters();
+    const selectedCharacter = characters.find(character => character.id.toString() === id);
+
+    return (
         <>
-        <p>pagina dettagli</p> 
+            {selectedCharacter && (
+                <div key={selectedCharacter.id}>
+                    <ul>
+                        <li><img src={selectedCharacter.image} alt={selectedCharacter.name}></img></li>
+
+                        <li>Name: {selectedCharacter.name}</li>
+                        <li>Status: {selectedCharacter.status}</li>
+                        <li>Species: {selectedCharacter.species}</li>
+                        <li>Origin: {selectedCharacter.origin.name}</li>
+                        <li>Location: {selectedCharacter.location.name}</li>
+                        <li>URL: {selectedCharacter.url}</li>
+                        <li>Created: {selectedCharacter.created}</li>
+                        <li>Episode:<ul> {selectedCharacter.episode.map((episode) =>
+                            <li><a href={episode}>{episode}</a></li>
+                        )} </ul>
+                        </li>
+                    </ul>
+                </div >
+            )}
         </>
-    )
+    );
 }
+

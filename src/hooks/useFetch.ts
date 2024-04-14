@@ -3,20 +3,24 @@ import { useEffect, useState } from "react";
 import { Characters } from "../components/Characters/Characters";
 const baseRoot = "https://rickandmortyapi.com/api/";
 
-export type Info = { count: number; page: number };
+export type Info = { count: number; pages: number };
 export type Character = {
   name: string;
   id: number;
-  image: string;
   status: string;
   species: string;
   origin: {
     name: string;
     url: string;
-  },location: {
-    name: string,
-    url: string
   };
+  location: {
+    name: string;
+    url: string;
+  };
+  image: string;
+  episode: [string, string];
+  url: string;
+  created: string;
 };
 export type Episode = { name: string; id: number; episode: string };
 

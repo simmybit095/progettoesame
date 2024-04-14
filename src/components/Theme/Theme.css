@@ -1,0 +1,19 @@
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.vp1 {
+    min-height: 100vh;
+    padding: 1px;
+}
+
+h1{
+    margin: 0;
+    padding: 20px;
+}
